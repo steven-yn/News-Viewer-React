@@ -72,12 +72,12 @@ const Category = styled(NavLink)`
 const Categories = ({ onSelect }) => {
   return (
     <CategoriesBlock>
-      {categories.map(c => (
+      {categories.map((c) => (
         <Category
           key={c.name}
           activeClassName="active"
           exact={c.name === 'all'}
-          to={c.name === 'all' ? '/' : `/${c.name}`}
+          to={c.name === 'all' ? '' : `${c.name}`}
         >
           {c.text}
         </Category>
